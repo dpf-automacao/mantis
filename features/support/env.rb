@@ -4,8 +4,6 @@ require 'capybara/cucumber'
 require "rspec"
 require 'site_prism'
 
-
-
 Capybara.register_driver :insecure_selenium do |app|
   Capybara::Selenium::Driver.new(
     app,
@@ -24,4 +22,4 @@ end
 
 Capybara.default_max_wait_time = 20
 
-#Capybara.page.driver.browser.manage.window.maximize
+Capybara.page.driver.browser.manage.window.maximize
